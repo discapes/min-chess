@@ -1,8 +1,13 @@
 <script>
 	import { onMount } from 'svelte';
 	import { Chess as ChessJS } from 'chess.js';
-	import { INPUT_EVENT_TYPE, COLOR, Chessboard, MARKER_TYPE } from 'cm-chessboard';
-	import '../../node_modules/cm-chessboard/assets/styles/cm-chessboard.css';
+	import {
+		INPUT_EVENT_TYPE,
+		COLOR,
+		Chessboard,
+		MARKER_TYPE
+	} from 'cm-chessboard/src/cm-chessboard/Chessboard.js';
+	import 'cm-chessboard/assets/styles/cm-chessboard.css';
 	import { Bot } from './bot';
 
 	onMount(() => {
@@ -78,6 +83,8 @@
 <style>
 	#boardId {
 		border: 2px solid black;
+		height: 400px;
+		width: 400px;
 	}
 	main {
 		max-width: 400px;

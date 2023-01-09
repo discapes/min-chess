@@ -30,6 +30,7 @@
 	},
 	"type": "module",
 	"dependencies": {
+		"@sveltejs/adapter-static": "^1.0.1",
 		"chess.js": "^1.0.0-alpha.0",
 		"cm-chessboard": "^5.4.8",
 		"stockfish-nnue.wasm": "^1.0.0-1946a675.smolnet"
