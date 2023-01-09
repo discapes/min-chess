@@ -16,7 +16,7 @@
 		const chess = new ChessJS();
 		const board = new Chessboard(document.getElementById('boardId'), {
 			position: chess.fen(),
-			sprite: { url: '../assets/images/chessboard-sprite-staunty.svg' },
+			sprite: { url: '/assets/images/chessboard-sprite-staunty.svg' },
 			style: { moveFromMarker: undefined, moveToMarker: undefined }, // disable standard markers
 			orientation: COLOR.white
 		});
@@ -47,9 +47,9 @@
 							if (!chess.isGameOver()) {
 								const botMove = await bot.getMove();
 								chess.move(botMove);
+								await event.chessboard.setPosition(chess.fen(), true);
 								if (!chess.isGameOver()) {
 									event.chessboard.enableMoveInput(inputHandler, COLOR.white);
-									event.chessboard.setPosition(chess.fen(), true);
 								}
 							}
 							if (chess.isGameOver()) alert('Game Over');
